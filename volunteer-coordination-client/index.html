@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Coordination System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Volunteer Coordination System</h1>
+    </header>
+    <main>
+        <section id="help-requests">
+            <h2>Help Requests</h2>
+            <div id="filters">
+                <label for="location-filter">Location:</label>
+                <select id="location-filter"></select>
+
+                <label for="status-filter">Status:</label>
+                <select id="status-filter">
+                    <option value="">All</option>
+                    <option value="waiting">Waiting</option>
+                    <option value="processing">Processing</option>
+                    <option value="finished">Finished</option>
+                </select>
+
+                <label for="priority-filter">Priority:</label>
+                <select id="priority-filter"></select>
+                <br>
+                <button onclick="loadHelpRequests()" style="padding:8px;border-radius: 15px;margin: 5px;width: 10vw;align-items: center;">Click to filter</button>
+            </div>
+            <ul id="help-requests-list"></ul>
+        </section>
+
+        <section id="volunteer-section" style="display: none;">
+            <h2>Volunteer for Request</h2>
+            <div id="volunteer-form">
+                <label for="volunteer-id">Enter your ID:</label>
+                <input type="text" id="volunteer-id">
+                <button onclick="volunteer()">I Volunteer</button>
+                <button onclick="showNewVolunteerForm()">New Volunteer</button>
+            </div>
+            <div id="new-volunteer-form" style="display: none;">
+                <h3>New Volunteer</h3>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone">
+                <button onclick="registerNewVolunteer()" >Register</button>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html> 
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Coordination System</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Volunteer Coordination System</h1>
+        
+        <div id="volunteer-section" style="display: none;">
+            <h2>New Volunteer Registration</h2>
+            <form id="new-volunteer-form" style="display: none;">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" required><br>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" required><br>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" required><br>
+                <button type="button" onclick="registerNewVolunteer()">Register</button>
+            </form>
+            <p id="volunteer-id-section" style="display: none;"></p>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
