@@ -67,9 +67,7 @@ const insertInitialData = async () => {
             useUnifiedTopology: true,
         });
 
-        // await Priority.insertMany(priorities);
-        // await Location.insertMany(locations);
-        // await HelpRequest.insertMany(helpRequest);
+
         await Volunteer.insertMany(volunteers);
 
 
