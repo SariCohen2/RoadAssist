@@ -27,8 +27,7 @@ app.use('/api/locations', locationRoutes);
 
 const port = process.env.PORT || 5000;
 const host = process.env.HOST;
-// app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-app.listen(port, host, () => {
 
+app.listen(port, host, () => {
     console.log(`express server is running at http://${host}:${port}`);
 })
